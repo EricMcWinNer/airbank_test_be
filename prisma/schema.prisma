@@ -1,0 +1,23 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = "postgresql://ericmcwinner:@localhost:5432/testdb"
+}
+
+model Transaction {
+  real_id         Int    @id @default(autoincrement())
+  id              String
+  account         String
+  description     String
+  category        String
+  reference       String
+  currency        String
+  amount          String
+  status          String
+  transactionDate DateTime 
+  createdAt       DateTime 
+  updatedAt       DateTime 
+}
